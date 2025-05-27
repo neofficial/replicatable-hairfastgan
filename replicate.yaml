@@ -1,0 +1,20 @@
+build:
+  gpu: true
+  cuda: "11.7"
+  python_version: "3.10"
+  system_packages:
+    - libgl1-mesa-glx
+    - libglib2.0-0
+  python_packages:
+    - torch==1.13.1
+    - torchvision==0.14.1
+    - numpy==1.23.5
+    - pillow==10.0.0
+    - tqdm==4.66.1
+    - dlib==19.24.1
+    - opencv-python==4.7.0.72
+    - face-alignment==1.3.4
+    - scipy==1.10.1
+    - gdown==3.12.2
+
+predict: python predict.py 
