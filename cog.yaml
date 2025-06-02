@@ -2,6 +2,10 @@ build:
   gpu: true
   python_version: "3.10"
   system_packages:
+    - gcc-10
+    - g++-10
+    - python3-dev
+    - make
     - libgl1-mesa-glx
     - libglib2.0-0
     - cmake
@@ -22,6 +26,11 @@ build:
     - libjpeg-dev
     - libpng-dev
     - libtiff-dev
+  run:
+    - update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100
+    - update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 100
+    - gcc --version
+    - g++ --version
   python_packages:
     - setuptools
     - wheel
