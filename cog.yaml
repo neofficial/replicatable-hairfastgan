@@ -20,7 +20,7 @@ build:
     - libavfilter-dev
     - libswresample-dev
   python_packages:
-    - torch==1.13.1
+    - torch==1.13.1+cpu
     - torchvision==0.14.1
     - numpy==1.23.5
     - pillow==10.0.0
