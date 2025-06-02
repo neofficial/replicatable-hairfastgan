@@ -19,7 +19,13 @@ build:
     - libavdevice-dev
     - libavfilter-dev
     - libswresample-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libtiff-dev
   python_packages:
+    - setuptools
+    - wheel
+    - pybind11
     - torch==1.13.1+cpu
     - torchvision==0.14.1
     - numpy==1.23.5
