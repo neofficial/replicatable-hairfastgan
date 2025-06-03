@@ -1,14 +1,34 @@
 build:
   gpu: true
   python_version: "3.10"
+  system_packages:
+    - gcc-10
+    - g++-10
+    - python3-dev
+    - make
+    - cmake
+    - libgl1-mesa-glx
+    - libglib2.0-0
+    - build-essential
+    - libboost-all-dev
+    - libopenblas-dev
+    - liblapack-dev
+    - libx11-dev
+    - libgtk2.0-dev
+    - pkg-config
+    - libavcodec-dev
+    - libavformat-dev
+    - libswscale-dev
+    - libavutil-dev
+    - libavdevice-dev
+    - libavfilter-dev
+    - libswresample-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libtiff-dev
   run:
-    - apt-get update
-    - apt-get install -y --fix-missing gcc-10 g++-10 python3-dev make libgl1-mesa-glx libglib2.0-0 cmake build-essential libboost-all-dev libopenblas-dev liblapack-dev libx11-dev libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev libavutil-dev libavdevice-dev libavfilter-dev libswresample-dev libjpeg-dev libpng-dev libtiff-dev
     - update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100
     - update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 100
-    - pip install --upgrade pip
-    - pip install cmake==3.22.6 scikit-build==0.16.7
-    - CMAKE_ARGS="-DCMAKE_C_COMPILER=gcc-10 -DCMAKE_CXX_COMPILER=g++-10" pip install dlib==19.24.1
     - gcc --version
     - g++ --version
   python_requirements: requirements.txt
