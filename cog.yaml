@@ -29,6 +29,8 @@ build:
   run:
     - update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100
     - update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 100
+    - ln -sf /usr/bin/gcc-10 /usr/bin/cc
+    - ln -sf /usr/bin/g++-10 /usr/bin/c++
     - gcc --version
     - g++ --version
   python_requirements: requirements.txt
