@@ -2,8 +2,8 @@ addict
 setuptools
 wheel
 pybind11
-torch==1.13.1+cpu
-torchvision==0.14.1
+torch==1.13.1+cu117
+torchvision==0.14.1+cu117
 numpy==1.23.5
 pillow==10.0.0
 tqdm==4.66.1
